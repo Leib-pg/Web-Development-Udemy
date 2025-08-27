@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança e Especificidade</title>
+
+<style>
+
+    /*-- herança --*/
+    /*
+    
+    * {
+        border: 1px solid red;
+    }
+
+    body {
+        color: #e75656;
+        border: 1px solid blue;
+        
+    }
+
+*/
+    /*--especificidade--*/
+/*
+    #pagina p {
+        color: blue ;
+
+    }
+    
+    #pagina p {
+        color:red;
+    }
+*/
+/* Se um seletor for mais especifico que outro
+o mais especifico será aplicada
+(terá precedência sobre regrasa mais gerais)
+*/
+
+    *{
+        color:red;
+    }
+
+    h2 {/*3*/
+        color: blue;
+    }
+
+    h2.verde {/*2*/
+        color: green;
+    }
+
+    h2#amarelo{/*1*/
+        color: yellow;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="pagina">
+        <h2 class="verde">Herança e Especificidade</h2>
+        <h2>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius hic unde odio tempore, laboriosam culpa at possimus numquam distinctio assumenda in eaque quibusdam et qui, pariatur ad veniam sequi quaerat.
+        </h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque blanditiis, eum esse laboriosam vero, exercitationem quos facilis id rerum in, tenetur ut sequi quia ipsum sapiente error! Neque, cumque debitis
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet sapiente accusamus aspernatur asperiores autem! Natus culpa quasi eligendi dicta! Officiis explicabo ut cupiditate quod ipsa ratione, ad excepturi. Vero, ipsam?
+        </p>
+    </div>
+
+
+</body>
+</html>

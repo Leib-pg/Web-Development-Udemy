@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Posicionamento absolute e fixed</title>
+
+<style>
+   .menu {
+        left: 240px;
+        top: 0px;
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: #d1d1d1;
+        border-radius: 10px;
+        padding: 10px;
+        width: 60%;
+        margin-bottom: 5px;
+        font-size: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        display: inline;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+    }
+
+    .menu a:hover {
+        color: #080707;
+        background-color: rgb(173, 173, 173);
+        border-radius: 8px;
+    }
+    
+    
+    
+    body {
+            background-color: #007fc7;
+        }
+
+        #container {
+            background-color: #FFF;
+            width: 800px;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 15px;
+            clear: right;
+            
+        }
+        
+
+        .absolute {
+            position: absolute;
+            width: 300px;
+            height: 250px;
+            top: 115px;
+            right: 370px;
+            background-color: #d6d6d6ba;
+        }
+
+        .relative {
+           border: solid 1px red;
+           position: relative;
+            /* border: solid 1px red;
+            position: relative;
+            top:10px;
+            left:80px;  */
+            /*top, right, bottom, left. */
+            bottom: -20px;
+            
+        }
+
+        h1 {
+            position: static;
+        }
+        
+        
+        .anuncio {
+            position: absolute;
+            top: 50px; /* Ajuste conforme necessário */
+            left: 0px; /* Distância da borda direita */
+            width: 200px;
+            height: 500px;
+            background-color: #f4f4f4;
+            border: 1px solid #050404;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            
+        }
+        .anuncio2 {
+            position: absolute;
+            top: 50px; /* Ajuste conforme necessário */
+            right: 0px; /* Distância da borda esquerda */
+            width: 200px;
+            height: 500px;
+            background-color: #f4f4f4;
+            border: 1px solid #050404;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            
+        }
+        img {
+            width: 200px;
+            height: 2;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            left: 295px
+        }
+        a {
+            text-decoration: none;
+            color: #3804f598;
+            font-size: 20px;
+            text-align: center;
+            display: block;
+        }
+        a:hover {
+            color: #080707;
+            background-color: rgb(173, 173, 173);
+            border-radius: 8px;
+        }
+
+
+</style>
+
+</head>
+<body>
+    
+    <div class="menu">
+        
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Biografia.html">Biografia</a></li>
+            <li><a href="Contato.html">Contato</a></li>
+        </ul>
+    </div>
+   
+   
+    
+    <div id="container">
+
+        <h2>Bio</h2>
+        <p>
+            Eu sou um estudante de programação, atualmente focado em HTML, CSS e JavaScript. Estou sempre buscando aprender mais e aprimorar minhas habilidades.
+            Meu objetivo é me tornar um desenvolvedor web completo, capaz de criar aplicações e sites incríveis.
+            Se você tiver alguma dúvida ou quiser entrar em contato, fique à vontade para me enviar uma mensagem!
+            Obrigado por visitar meu site!
+            Você pode me encontrar nas redes sociais:
+        </p>
+        
+        <img src="img-test/foto-biblia.jpg" alt="GitHub">
+
+        <a href="https://www.bing.com/search?qs=HS&pq=foto&sk=CSYN1UAS8AS9LS3&sc=24-4&pglt=41&q=foto+de+uma+biblia&cvid=1f51203c559041ecbfd8063e0c782847&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxBFGDwyBggIEEUYPDIICAkQ6QcY_FXSAQg2NTUzajBqMagCALACAA&FORM=ANNAB1&DAF0=1&PC=NMTS" target="_blank">
+            <h3>biblia</h3>
+        </a>
+    </div>
+    
+    <div>
+        <h2 class="anuncio">anuncio</h2>
+    </div>
+    <div>
+        <h2 class="anuncio2">anuncio</h2>
+    </div>
+
+</body>
+</html>
