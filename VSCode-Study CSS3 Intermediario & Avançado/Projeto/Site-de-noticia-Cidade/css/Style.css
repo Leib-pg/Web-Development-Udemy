@@ -96,18 +96,18 @@ body.Ciências #Navegacao a#Ciências {
 
 #Side {
   width: 180px;
-  order: 0;
+  order: 3;
   /* Visualmente à esquerda */
 }
 
 #First {
   width: 270px;
-  order: 1;
+  order: 2;
 }
 
 #Second {
   width: 270px;
-  order: 2;
+  order: 1;
 }
 
 /* Contents */
@@ -131,6 +131,19 @@ h2 {
   margin-top: 5px;
 
 }
+
+#Second div p {
+  font-size: 15px;
+text-indent: inherit;
+padding-bottom: 10px;
+}
+
+
+div#container a {
+  color: #828282;
+}
+
+
 
 /* Fim Contents */
 /* Início Side Content */
@@ -178,6 +191,7 @@ input.submit {
 img.imagem-principal {
   width: 98%;
   border: 3px solid #bfbfbf;
+
 }
 
 h3 {
@@ -187,10 +201,6 @@ h3 {
   padding: 3px;
 }
 
-h3.destaque {
-  
-
-}
 /* Inicio Footer */
 #Footer {
   width: 750px;
