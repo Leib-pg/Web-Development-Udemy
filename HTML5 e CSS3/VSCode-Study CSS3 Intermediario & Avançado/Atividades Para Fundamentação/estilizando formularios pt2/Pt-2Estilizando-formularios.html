@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pt 2Estilizando formularios</title>
+<style>
+ body{
+    font-family: Arial, sans-serif;
+    background: #643d87 url('imagens/fundo.jpg') no-repeat center center fixed;
+ } 
+
+ #container {
+    width: 500px;
+    height: 300px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container img {
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
+    
+input {
+    height: 40px;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding-left: 40px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+input.email {
+    background: url('imagens/icone-usuario.png') no-repeat 10px center;
+    background-size: 20px;
+}
+
+input.senha {
+    background: url('imagens/icone-cadeado.png') no-repeat 10px center;
+    background-size: 20px;
+}
+input.submit {
+    color: #fff;
+    background-color: #f79300;
+    border: 2px solid #db7d00;
+    padding-left: 0;
+    background: #f79300;
+    cursor: pointer;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <img src="imagens/perfil.png" alt="logo">
+        <form>
+            <div class="email">
+                <input type="text" id="email" name="email" placeholder="Digite seu Email" class="email">
+            </div>
+            <div class="senha">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" class="senha">
+            </div>
+            <div class="submit">
+                <input type="submit" value="Logar" class="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

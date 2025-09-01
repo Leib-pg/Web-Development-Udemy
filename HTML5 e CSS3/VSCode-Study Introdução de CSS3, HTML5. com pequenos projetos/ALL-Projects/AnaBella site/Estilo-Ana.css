@@ -1,0 +1,72 @@
+.foto-ana {
+        width: 138%;
+        height: 370px;
+        border-radius: 10px;
+        margin-bottom: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        background-color: #c79f64b4;
+        border-radius: 10px;
+        padding: 10px;
+        width: 60%;
+        margin-bottom: 5px;
+        font-size: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        display: inline;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+    }
+
+    .menu a:hover {
+        color: #fff;
+    }
+
+    body {
+        background-image: url(Imagens/fundo-ana.jpg);
+        font-family: Arial, sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    .Conteudo {
+        display: flex;
+        background-color: #c79f64b4;
+        border-radius: 10px;
+        padding: 10px;
+        width: 62%;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+    
+    p {
+       font-size: 15px;
+        
+    }
+
+    .fakeana {
+        width: 290px;
+        height: 230px;
+        border-radius: 10px ;
+        border: solid 10px #78613fb4;
+        border-radius: 1px;
+    }
