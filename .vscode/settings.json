@@ -1,0 +1,62 @@
+{
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.lineHeight": 1.8,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.renderWhitespace": "all",
+  "editor.smoothScrolling": true,
+  "files.autoSave": "off", // desligado pra não dar conflito com formatOnSave
+  "files.autoSaveDelay": 1000,
+  "editor.formatOnSave": true,
+  "editor.codeLens": true,
+  "editor.renderControlCharacters": false,
+  "editor.scrollBeyondLastLine": false,
+  "workbench.statusBar.visible": true,
+  "editor.guides.indentation": true,
+
+  // Formatter padrão → Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ESLint + Prettier rodando no salvar
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "eslint.validate": ["javascript"],
+  "editor.insertSpaces": true,
+  "breadcrumbs.enabled": true,
+  "explorer.confirmDelete": false,
+
+  // Better Comments
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379"
+    }
+  ]
+}
