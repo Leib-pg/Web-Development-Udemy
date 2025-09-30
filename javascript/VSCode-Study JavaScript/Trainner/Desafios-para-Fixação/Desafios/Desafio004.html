@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media de nota</title>
+  </head>
+  <body>
+    <script>
+      let nota = [];
+      let soma = 0;
+
+      for (let i = 0; i < 3; ) {
+        nota[i] = parseFloat(prompt(`Digite a ${i + 1}ª nota:`));
+        soma += nota[i];
+        i++;
+      }
+
+      let media = nota / 4;
+
+      for (let i = 0; i < 3; i++) {
+        if (media >= 7) {
+          alert(`A média é ${media}. Aluno aprovado!`);
+        } else {
+          alert(`A média é ${media}. Aluno reprovado!`);
+        }
+      }
+
+      console.log(nota);
+      console.log(soma);
+      
+
+    </script>
+  </body>
+</html>

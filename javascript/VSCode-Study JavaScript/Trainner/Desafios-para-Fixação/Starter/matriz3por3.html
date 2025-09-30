@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matriz 3x3</title>
+  </head>
+  <body>
+    <h2>Matriz 3x3</h2>
+    <div id="resultado"></div>
+    <style>
+      body {
+        background: #171717;
+        color: #f1f1f1;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      div {
+        border-color: #f1f1f1;
+        border-radius: 10px;
+        border-style: solid;
+        width: auto;
+        position: relative;
+        display: inline-block;
+      }das
+      div:hover {
+        transform: scale(0.3);
+        transition: 0.3s;
+      }
+    </style>
+
+    <script>
+      let matriz = [];
+      // Lê os valores da matriz
+      for (let i = 0; i < 3; i++) {
+        matriz[i] = [];
+        for (let j = 0; j < 3; j++) {
+          let valor = prompt(`Digite o valor para a posição [${i}][${j}]:`);
+          matriz[i][j] = valor;
+        }
+      }
+      // Exibe a matriz no HTML
+      let html = "<div><table border='1' cellpadding='10'>";
+      for (let i = 0; i < 3; i++) {
+        html += "<tr>";
+        for (let j = 0; j < 3; j++) {
+          html += `<td>${matriz[i][j]}</td>`;
+        }
+        html += "</tr>";
+      }
+      html += "</table></div>";
+      document.getElementById("resultado").innerHTML = html;
+    </script>
+  </body>
+</html>

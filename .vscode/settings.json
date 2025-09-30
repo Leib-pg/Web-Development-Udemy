@@ -12,7 +12,7 @@
   "editor.cursorBlinking": "smooth",
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
-  "files.autoSave": "off", // desligado pra não dar conflito com formatOnSave
+  "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "editor.formatOnSave": true,
   "editor.codeLens": true,
@@ -58,5 +58,6 @@
       "tag": "*",
       "color": "#98C379"
     }
-  ]
+  ],
+  "CodeGPT.apiKey": "Anthropic"
 }

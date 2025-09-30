@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Login</title>
+    <style>
+      body {
+        background: #181818;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        background: #23272a;
+        padding: 32px 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h2 {
+        color: #fff;
+        margin-bottom: 24px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        border: none;
+        border-radius: 6px;
+        background: #2c2f33;
+        color: #fff;
+        font-size: 1em;
+      }
+      input:hover {
+        transform: scale(1.02);
+        trasition: 0.9s;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #7289da;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #5865f2;
+      }
+
+      img {
+        text-indent: inline;
+      }
+      .imglogin {
+        display: flex;
+        align-items: left;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .login-header {
+        display: flex;
+        float: left;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .login-header img {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="login-header">
+        <img
+          src="../HTML5-e-CSS3/VSCode-Study Introdução de CSS3, HTML5. com pequenos projetos/Imagens/seta.png"
+          alt="Login"
+        />
+        <h2>Login</h2>
+      </div>
+      <form>
+        <input type="text" placeholder="Usuário" />
+        <input type="password" placeholder="Senha" />
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </body>
+</html>

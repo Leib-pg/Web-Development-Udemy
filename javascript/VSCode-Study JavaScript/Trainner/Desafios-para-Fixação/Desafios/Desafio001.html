@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alternando valores de A B C</title>
+  </head>
+  <body>
+    <h2>Valores invertidos:</h2>
+    <p id="resultado"></p>
+    <script>
+      // Solicita os valores para a e b
+      var a = prompt("Digite o valor de A:");
+      var b = prompt("Digite o valor de B:");
+      var c = prompt("Digite o valor de C:");
+
+      // Inverte os valores de a e b
+      var temp = a;
+      a = b;
+      b = temp;
+
+      // Exibe os valores no HTML
+      document.getElementById("resultado").innerHTML =
+        "A: " + a + "<br>B: " + b + "<br>C: " + c;
+    </script>
+  </body>
+</html>

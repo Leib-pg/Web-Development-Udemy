@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculos</title>
+  </head>
+
+  <body>
+    <script>
+      let sair = false;
+      while (!sair) {
+        let operacao = prompt(
+          "Escolha a operação:\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair"
+        );
+
+        if (operacao === "5") {
+          sair = true;
+          alert("Saindo...");
+          break;
+        }
+
+        let num1 = parseFloat(prompt("Digite o primeiro número:"));
+        let num2 = parseFloat(prompt("Digite o segundo número:"));
+        let resultado;
+
+        switch (operacao) {
+          case "1":
+            resultado = num1 + num2;
+            break;
+          case "2":
+            resultado = num1 - num2;
+            break;
+          case "3":
+            resultado = num1 * num2;
+            break;
+          case "4":
+            if (num2 !== 0) {
+              resultado = num1 / num2;
+            } else {
+              resultado = "Erro: Divisão por zero não é permitida.";
+            }
+            break;
+          default:
+            resultado = "Operação inválida.";
+        }
+
+        alert("O resultado é: " + resultado);
+      }
+    </script>
+  </body>
+</html>

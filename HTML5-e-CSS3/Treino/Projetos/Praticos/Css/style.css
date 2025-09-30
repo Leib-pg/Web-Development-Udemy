@@ -1,0 +1,97 @@
+/*formatações iniciais*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222222;
+  font: 12px "lucida grande", "Lucida Sans Unicode", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*formatação de links*/
+
+nav {
+  max-width: 220px;
+  min-width: 140px;
+  background: #424242;
+  color: #fff;
+  padding: 20px;
+  display: block; /* Troca flex por block */
+  float: left; /* Faz o nav flutuar à esquerda */
+  height: 100vh; /* Barra lateral de altura total */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 20px;
+}
+
+nav a {
+  display: block; /* Faz cada link ocupar uma linha inteira */
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+/*Conteudo principal*/
+main {
+  margin-left: 220px;
+  padding: 40px;
+  width: calc(100% - 220px);
+}
+
+section {
+  min-height: 100vg;
+  padding: 40px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: #333;
+  margin-bottom: 32px;
+  padding: 24px;
+}
+
+section:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+#projetos {
+  background: #f0f0f0;
+  z-index: 10px;
+  position: relative;
+}
+
+/*botões cards menus etc*/
+
+.btn {
+  background: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: darkblue;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: collum;
+  }
+}

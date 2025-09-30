@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <style>
+      body {
+        background: #222;
+        color: #eee;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: #2c2c2c;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        padding: 32px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      header img {
+        position: relative;
+        float: left;
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        object-fit: cover;
+      }
+      header img:hover {
+        transform: scale(1.17) translate(0, -15px);
+        transition: transform 0.3s;
+      }
+      h1 {
+        margin: 0;
+        font-size: 2em;
+        letter-spacing: 2px;
+      }
+      nav {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      nav a {
+        color: #7289da;
+        text-decoration: none;
+        margin: 0 16px;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: #fff;
+      }
+      section {
+        margin-bottom: 32px;
+      }
+      h2 {
+        color: #7289da;
+        margin-bottom: 12px;
+      }
+      footer {
+        text-align: center;
+        color: #888;
+        margin-top: 32px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="../Desafios-do-ChatGPT/img/WIN_20250828_09_23_47_Pro.jpg"
+          alt="Foto de perfil"
+        />
+        <h1>Leib Aurelio</h1>
+        <p>Desenvolvedor Web | Front-end | Back-end</p>
+      </header>
+
+      <nav style="display: flex; justify-content: center; gap: 20px">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Breve descrição sobre você, suas habilidades e experiência.</p>
+      </section>
+      <section id="projetos">
+        <h2>Projetos</h2>
+        <ul>
+          <li>Projeto 1 - Descrição breve</li>
+          <li>Projeto 2 - Descrição breve</li>
+          <li>Projeto 3 - Descrição breve</li>
+        </ul>
+      </section>
+      <section id="contato">
+        <h2>Contato</h2>
+        <p>Email: seuemail@exemplo.com</p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/seuusuario</a></p>
+      </section>
+      <footer>&copy; 2025 Seu Nome. Todos os direitos reservados.</footer>
+    </div>
+  </body>
+</html>

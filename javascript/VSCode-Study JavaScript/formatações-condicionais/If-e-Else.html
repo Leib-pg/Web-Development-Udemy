@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Aprovação</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0px;
+        background-color: #333;
+      }
+
+      h1 {
+        color: #acacac;
+        position: relative;
+        top: 200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let soma = 0;
+      let nota = [];
+
+      for (let i = 0; i < 4; i++) {
+        nota[i] = parseFloat(prompt("Digite a " + (i + 1) + "ª nota:"));
+        soma += nota[i];
+
+        if (nota[i] < 0 || nota[i] > 10 || isNaN(nota[i])) {
+          alert("Nota inválida! Por favor, insira uma nota entre 0 e 10.");
+          i--; // Decrementa i para repetir a entrada da nota inválida
+        }
+      }
+      let media = soma / 4;
+
+      if (media < 7) {
+        document.write(
+          "<div><h1>Sua média é " +
+            media.toFixed(2) +
+            ". Você foi reprovado!</h1></div>"
+        );
+      } else {
+        document.write(
+          "<div><h1>Sua média é " +
+            media.toFixed(2) +
+            ". Você foi aprovado!</h1></div>"
+        );
+      }
+    </script>
+  </body>
+</html>
