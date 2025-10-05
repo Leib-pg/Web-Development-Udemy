@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precedencia de execução</title>
+  </head>
+  <body>
+    <script>
+      let numero1 = 6;
+      let numero2 = 3;
+
+      // Corrigido: nome da variável e precedência de execução
+      // Exemplo: (numero1 - numero2) primeiro, depois divisão
+      let resultado = numero1 + numero2 / (numero1 - numero2);
+      document.write("A soma dos números é: " + resultado);
+    </script>
+  </body>
+</html>

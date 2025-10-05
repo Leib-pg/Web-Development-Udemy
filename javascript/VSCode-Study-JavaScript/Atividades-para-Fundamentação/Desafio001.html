@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio IMC</title>
+  </head>
+  <body>
+    <script>
+      let nome = prompt("Qual é o seu nome?");
+      let altura = parseFloat(prompt("Qual é a sua altura em centímetros?"));
+      let peso = parseFloat(prompt("Qual é o seu peso em kg?"));
+      let alturaemmetros = altura / 100;
+      let massacorporal = peso / (alturaemmetros * alturaemmetros);
+
+      let classificacao = "";
+
+      if (massacorporal < 16) {
+        classificacao = "massa muito grave";
+      } else if (massacorporal >= 16 && massacorporal <= 16.99) {
+        classificacao = "massa grave";
+      } else if (massacorporal >= 17 && massacorporal <= 18.49) {
+        classificacao = "massa abaixo do normal";
+      } else if (massacorporal >= 18.5 && massacorporal <= 24.99) {
+        classificacao = "massa normal";
+      } else if (massacorporal >= 25 && massacorporal <= 29.99) {
+        classificacao = "massa acima do normal";
+      } else if (massacorporal >= 30 && massacorporal <= 34.99) {
+        classificacao = "massa obesa";
+      } else if (massacorporal >= 35 && massacorporal <= 39.99) {
+        classificacao = "massa muito obesa";
+      } else if (massacorporal >= 40) {
+        classificacao = "massa extremamente obesa";
+      }
+
+      document.write(
+        `<h1>${nome}</h1>
+         <p>Possui índice de massa corporal igual a ${massacorporal.toFixed(
+           2
+         )}</p>
+         <p>Está classificado como ${classificacao}</p>`
+      );
+    </script>
+  </body>
+</html>

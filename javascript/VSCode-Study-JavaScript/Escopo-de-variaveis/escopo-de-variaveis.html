@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>escopo de variaveis</title>
+</head>
+<script>
+  //exitem 3 tipos escopos de variaveis
+  //escopo global 
+  var escopoGlobal = "global"; //variavel global
+  console.log(escopoGlobal);
+  function escopoLocal() {
+    //escopo local
+    let escopoLocalInterno = "local"; //variavel local
+    console.log(escopoLocalInterno);
+  }
+  escopoLocal();
+  //console.log(escopoLocalInterno); //retorna erro pq a variavel é local e so funciona dentro da funcao
+  
+
+
+
+</script>
+
+
+<body>
+  
+</body>
+</html>

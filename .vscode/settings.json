@@ -59,5 +59,17 @@
       "color": "#98C379"
     }
   ],
-  "CodeGPT.apiKey": "Anthropic"
+  "CodeGPT.apiKey": "Anthropic",
+
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "venv/Scripts/python.exe",
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  }
 }
+

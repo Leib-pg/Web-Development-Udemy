@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexibilidade de parametros</title>
+<script>
+
+function soma(a, b) {
+  return a + b; //aqui existe a flexiblidade de adcionar mais parametros na hora de chamar a funcao que logo abaixo os valores estao sendo dados apenas adiconar por exemplo ", c, d, e" e na hora de chamar a funcao colocar os valores que quiser
+
+}
+//aqui a func vai descendo e testando cada parametro
+console.log(soma(2, 3, 9, 15, 65)) //desconsidera os parametros a mais
+console.log(soma(2, 7))
+console.log(soma(2)) //retorna NaN pq 2 + indefinido = NaN  
+console.log(soma()) //retorna NaN pq indefinido + indefinido = NaN
+  
+
+
+
+</script>
+</head>
+<body>
+  
+
+
+</body>
+</html>

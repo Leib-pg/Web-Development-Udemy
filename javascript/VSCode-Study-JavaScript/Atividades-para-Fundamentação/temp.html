@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Teste de Aprendizado</title>
+    <style>
+      body {
+        background: #0a2233;
+        color: #eaf6fb;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+      }
+      header {
+        background: #0e3a53;
+        padding: 24px 0;
+        text-align: center;
+        color: #00bcd4;
+        font-size: 2em;
+        letter-spacing: 2px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+      }
+      main {
+        max-width: 800px;
+        margin: 40px auto;
+        background: #133c4b;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+        padding: 32px;
+      }
+      h2 {
+        color: #00bcd4;
+        margin-bottom: 16px;
+      }
+      button {
+        background: #00bcd4;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 24px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 16px;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #0097a7;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        border: none;
+        border-radius: 6px;
+        background: #eaf6fb;
+        color: #0a2233;
+        font-size: 1em;
+      }
+      footer {
+        text-align: center;
+        color: #b2ebf2;
+        margin-top: 40px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Site basico com <strong>CSS</strong> E <strong>javascript</strong></header>
+    <main>
+      <input type="text" id="nome" placeholder="Digite seu nome" />
+      <button onclick="saudar()">Saudar</button>
+      <div id="mensagem"></div>
+    </main>
+    <footer>&copy; 2025 Leib. Todos os direitos reservados.</footer>
+    <script>
+      function saudar() {
+        const nome = document.getElementById("nome").value;
+        const mensagem = document.getElementById("mensagem");
+        if (nome.trim() === "") {
+          mensagem.innerHTML =
+            "<p style='color:#ff5252;'>Por favor, digite seu nome!</p>";
+        } else {
+          mensagem.innerHTML = `<p style='color:#00bcd4;'>Olá, ${nome}! Seja bem-vindo ao site.</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

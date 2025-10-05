@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback</title>
+  </head>
+  <script>
+    function exibirArtigo(id, callbackSucesso, callbackErro) {
+      //logica: recuperar o id via requisição http
+      if (true) {
+        callbackSucesso("Bolsonaro é preso", "por conta dessa prisao .....");
+      } else {
+        callbackErro("Artigo não encontrado");
+      }
+    }
+    //aqui ultilizei a tecnica de wrapping para que o codigo fique mais legivel ou seja mais facil para manutençoes futuras
+    //é uma boa pratica ultilizar essa tecnica para evitar callback hell
+    var callbackSucesso = function (titulo, mensagem) {
+      document.write("<h1>" + titulo + "</h1>");
+      document.write("<hr />");
+      document.write("<p>" + mensagem + "</p>");
+    };
+    var callbackErro = function (erro) {
+      document.write("<p><b>Erro:</b> " + erro + "< /h1>");
+    };
+    //aqui nao devo ultilizar o abra e fecha parentese ao lado das variaveis callback pois senao irei declarar que deve ser escrito a função callbacksucesso etc
+    exibirArtigo(1, callbackSucesso, callbackErro);
+  </script>
+
+  <body></body>
+</html>
