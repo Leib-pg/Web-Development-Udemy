@@ -71,9 +71,13 @@
     "**/__pycache__": true,
     "**/*.pyc": true
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   },
   "python-envs.defaultEnvManager": "ms-python.python:venv",
   "python-envs.pythonProjects": []
+=======
+  }
+>>>>>>> Stashed changes
 =======
   }
 >>>>>>> Stashed changes
