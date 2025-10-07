@@ -70,6 +70,7 @@
   "files.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": true
-  }
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:venv",
+  "python-envs.pythonProjects": []
 }
-

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eventos mause</title>
+</head>
+<script>
+  // click - quando o elemento é clicado
+  // dblclick - quando o elemento é clicado duas vezes
+  // mouseover - quando o mouse passa por cima do elemento
+  // mouseout - quando o mouse sai de cima do elemento
+
+  //um exemplo pratico que poderia ser utilizado esses função seria ao o usuario clicar em um botao para enviar um formulario ou entao ao ele passar o mouse por cima de uma imagem para ver uma descricao etc...
+
+  function clicar(){
+    alert('você clicou')
+    return true;
+  }
+  function doisclicks(){
+    alert('você deu dois clicks')
+    return true;
+  }
+  function mauseover(){
+    alert('você passou o mouse')
+    return true;
+  }
+  function mauseout(){
+    alert('você tirou o mouse')
+    return true;
+  }
+
+</script>
+<body>
+</body>
+</html>
+  <!--aqui eu fiz com function mas posso fazer tambem direto na div-->
+  <div onclick="alert(clicar())" style="background-color: #ccc; width: 300px; height: 150px;">
+  
+  </div>
+  <br>
+  <div ondblclick="alert(doisclicks())" style="background-color: #ccc; width: 300px; height: 150px;">
+  </div>
+  <br>
+  <div onmouseover="alert(mauseover())" style="background-color: #ccc; width: 300px; height: 150px;">
+  </div>
+  <br>
+  <div onmouseout="alert(mauseout())" style="background-color: #ccc; width: 300px; height: 150px;">
+  </div>
+
