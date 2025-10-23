@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Um exemplo interativo que demonstra como alternar temas e animar elementos com CSS e JavaScript."
+    />
+    <title>Botão Interativo | Tema e Movimento</title>
+    <style>
+      /* Melhoria 1: Uso de Variáveis CSS (Custom Properties)
+        Facilita a manutenção do tema. Mudar uma cor ou um valor aqui
+        atualiza o site inteiro.
+      */
+      :root {
+        /* Cores */
+        --cor-fundo-escuro: #6e99f1;
+        --cor-texto-escuro: #f0f0f0;
+        --cor-fundo-claro: #34525f;
+        --cor-texto-claro: #000000;
+
+        --cor-caixa-inicial: #61dafb;
+        --cor-caixa-direita: #ff9800;
+        --cor-caixa-esquerda: #4caf50;
+
+        /* Dimensões e Transições */
+        --tamanho-caixa: 150px;
+        --distancia-movimento: 250px;
+        --duracao-transicao: 0.1s;
+        --funcao-timing: ease-in-out;
+        --raio-borda: 16px;
+        --sombra-caixa: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      body {
+        background-color: var(--cor-fundo-escuro);
+        color: var(--cor-fundo-escuro);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        transition: background-color var(--duracao-transicao),
+          color var(--duracao-transicao);
+        min-height: 100vh;
+        margin: 0;
+        /* Melhoria 2: Centralização moderna com Grid */
+        display: grid;
+        place-content: center;
+        overflow: hidden; /* Evita barras de rolagem durante a animação */
+      }
+
+      body.tema-claro {
+        background-color: var(--cor-fundo-claro);
+        color: var(--cor-texto-claro);
+      }
+
+      .caixa {
+        width: var(--tamanho-caixa);
+        height: var(--tamanho-caixa);
+        background-color: var(--cor-caixa-inicial);
+        border-radius: var(--raio-borda);
+        box-shadow: var(--sombra-caixa);
+        display: grid;
+        place-content: center;
+        /* Melhoria 3: Animação com `transform` em vez de `left`
+          É mais performático, pois não causa um "reflow" do layout da página, 
+          resultando em uma animação mais suave.
+        */
+        transform: translateX(0);
+        transition: transform var(--duracao-transicao) var(--funcao-timing),
+          background-color var(--duracao-transicao) var(--funcao-timing);
+      }
+
+      .caixa.mover-direita {
+        transform: translateX(var(--distancia-movimento));
+        background-color: var(--cor-caixa-direita);
+      }
+
+      .caixa.mover-esquerda {
+        transform: translateX(calc(-1 * var(--distancia-movimento)));
+        background-color: var(--cor-caixa-esquerda);
+      }
+
+      .btn-interativo {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: var(--cor-fundo-escuro);
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      /* Melhoria 4: Feedback visual para o usuário */
+      .btn-interativo:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-interativo:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-interativo:focus-visible {
+        outline: 3px solid var(--cor-caixa-inicial);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caixa" id="caixa">
+      <button class="btn-interativo" id="btnInterativo">
+        Mover & Mudar Tema
+      </button>
+    </div>
+
+    <script>
+      /*
+        Melhoria 5: Estrutura JavaScript moderna e eficiente
+      */
+      // Garante que o script só rode após o HTML ser totalmente carregado.
+      document.addEventListener("DOMContentLoaded", () => {
+        // Seleciona os elementos da página uma única vez para melhor performance.
+        const btnInterativo = document.getElementById("btnInterativo");
+        const caixa = document.getElementById("caixa");
+        const body = document.body;
+
+        // Variável com nome claro para controlar o estado do movimento.
+        let proximoMovimentoDireita = true;
+
+        // Usa `addEventListener`, a forma moderna e flexível de lidar com eventos.
+        btnInterativo.addEventListener("click", () => {
+          if (proximoMovimentoDireita) {
+            // Move para a direita
+            caixa.classList.remove("mover-esquerda");
+            caixa.classList.add("mover-direita");
+            body.classList.add("tema-claro");
+          } else {
+            // Move para a esquerda
+            caixa.classList.remove("mover-direita");
+            caixa.classList.add("mover-esquerda");
+            body.classList.remove("tema-claro");
+          }
+
+          // Inverte o estado para o próximo clique
+          proximoMovimentoDireita = !proximoMovimentoDireita;
+        });
+      });
+    </script>
+  </body>
+</html>

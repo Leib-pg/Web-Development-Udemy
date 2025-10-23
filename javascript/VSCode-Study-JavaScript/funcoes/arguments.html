@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aprendendo a usar a propiedade arguments</title>
+<head>
+  <script>
+ /*
+ // arguments é uma propiedade de todas as funcoes
+ // ela armazena todos os argumentos enviados para a funcao
+ // mesmo que a funcao nao tenha parametros definidos
+ // exemplo:
+ function soma() {
+      console.log(arguments)
+    }
+
+    console.log(soma(7, 5, 10, 20, 30, 50));
+*/
+
+function soma() {
+    var resultado = 0;
+    for(var i in arguments) { //percorrendo todos os argumentos
+        resultado += arguments[i];
+    }
+    return resultado;
+  }
+    console.log(soma(7, 5, 13, 26, 4, 0.8, 'texto')); //retorna concatenado numero com texto
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

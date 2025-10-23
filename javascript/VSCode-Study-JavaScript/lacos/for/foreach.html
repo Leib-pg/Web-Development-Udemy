@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For each</title>
+  <script>
+
+    var listaFuncionarios = ['jorge', 'jamilton', 'ana', 'maria', 'joana'];
+
+
+    //aqui temos uma função callback que será executada para cada elemento do array onde o primeiro parâmetro é o valor do elemento e o segundo é o índic ''e do elemento no array'
+
+    console.log(listaFuncionarios)
+    document.write(listaFuncionarios[3])
+
+    listaFuncionarios.forEach(function(nome, indice){
+      //aqui vem a logica que será executada para cada elemento do array
+      console.log("Funcionário " + indice + ": " + nome);
+      
+      if(valor == 'lucas')
+        Array[indice] = 'um valor novo';
+    });
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

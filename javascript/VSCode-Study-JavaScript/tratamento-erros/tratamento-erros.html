@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tratamento de erros</title>
+    <script>
+
+
+      var video = [];
+
+
+      video[1] = Array();
+      video[1]["nome"] = "Fullmetal Alchemist";
+      video[1]["categoria"] = "anime";
+
+      function getVideo(video) {
+        //logica
+        //http
+        try {
+          //essa linha pode gerar um erro
+          console.log(video[2]["nome"]);
+        } catch (erro) {
+          //
+          tratarerro(erro);
+          console.log("Agora sim podemos tratar esse erro");
+          throw new Erro('houve um erro aqui');
+
+        } finally {
+          //sempre sera executado
+          console.log("Sempre passar por aqui (try / catch)");
+        }
+
+        console.log("A aplicação morreu aqui");
+      }
+
+      function tratarerro(e) {
+        //logica de tratamento de erro
+        console.log(e);
+      }
+      getVideo(video);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Função via Arrow</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background:#f4f7fb; color:#012; }
+    button{ margin:6px 0; padding:8px 12px; }
+    pre { background:#fff; padding:12px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+  </style>
+</head>
+<body>
+  <h2>Exemplos de Arrow Functions (=&gt;)</h2>
+
+  <button id="ex1">Somar 2 + 3</button><br>
+  <button id="ex2">Dobrar 5</button><br>
+  <button id="ex3">Retornar objeto</button><br>
+  <button id="ex4">Função com corpo (várias linhas)</button>
+
+  <pre id="out"></pre>
+
+  <script>
+    // 1) Função simples — retorno implícito (sem chaves)
+    const soma = (a, b) => a + b;
+
+    // 2) Um parâmetro — pode omitir parênteses
+    const dobro = n => n * 2;
+
+    // 3) Sem parâmetros — usa parênteses vazios
+    const conforme = () => 'ok';
+
+    // 4) Retornando um objeto literal — envolver por parênteses
+    const criaObj = (x, y) => ({ x, y });
+
+    // 5) Corpo com várias instruções — usar chaves e return
+    const somaComplexa = (a, b) => {
+      const s = a + b;
+      const mensagem = `soma = ${s}`;
+      return mensagem;
+    };
+
+    // 6) Uso como callback — ex: map, filter
+    const nums = [1,2,3];
+    const dobrados = nums.map(n => n * 2); // [2,4,6]
+
+    // Conecta botões a ações para ver resultados
+    const out = document.getElementById('out');
+    document.getElementById('ex1').onclick = () => out.textContent = 'soma(2,3) = ' + soma(2,3);
+    document.getElementById('ex2').onclick = () => out.textContent = 'dobro(5) = ' + dobro(5);
+    document.getElementById('ex3').onclick = () => out.textContent = 'criaObj(10,20) = ' + JSON.stringify(criaObj(10,20));
+    document.getElementById('ex4').onclick = () => out.textContent = somaComplexa(7,8);
+
+    // Exemplo rápido em console
+    console.log('nums:', nums, 'dobrados:', dobrados, 'conforme():', conforme());
+
+    // --- Teste no console / prompt (código corrigido) ---
+    // Função arrow correta que recebe dois parâmetros
+    const somaDeDoisNumeros = (n1, n2) => n1 + n2;
+
+    // Lê os números do usuário e valida
+    const entrada1 = prompt('Digite o primeiro número:');
+    const entrada2 = prompt('Digite o segundo número:');
+
+    const num1 = parseFloat(entrada1);
+    const num2 = parseFloat(entrada2);
+
+    if (isNaN(num1) || isNaN(num2)) {
+      alert('Entrada inválida. Certifique-se de digitar números válidos.');
+      console.warn('Entrada inválida:', entrada1, entrada2);
+    } else {
+      const resultado = somaDeDoisNumeros(num1, num2);
+      alert('Resultado: ' + resultado);
+      console.log('Resultado da soma:', resultado);
+    }
+  </script>
+</body>
+</html>
+```// filepath: c:\Users\LEIBAURELIOARAUJOFAR\OneDrive - Sesi - Pernambuco PE\Desktop\VSCode-Study\javascript\vscode-study-javascript\funcoes\funcao-via-arrow.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Função via Arrow</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background:#f4f7fb; color:#012; }
+    button{ margin:6px 0; padding:8px 12px; }
+    pre { background:#fff; padding:12px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+  </style>
+</head>
+<body>
+  <h2>Exemplos de Arrow Functions (=&gt;)</h2>
+
+  <button id="ex1">Somar 2 + 3</button><br>
+  <button id="ex2">Dobrar 5</button><br>
+  <button id="ex3">Retornar objeto</button><br>
+  <button id="ex4">Função com corpo (várias linhas)</button>
+
+  <pre id="out"></pre>
+
+  <script>
+    // 1) Função simples — retorno implícito (sem chaves)
+    const soma = (a, b) => a + b;
+
+    // 2) Um parâmetro — pode omitir parênteses
+    const dobro = n => n * 2;
+
+    // 3) Sem parâmetros — usa parênteses vazios
+    const conforme = () => 'ok';
+
+    // 4) Retornando um objeto literal — envolver por parênteses
+    const criaObj = (x, y) => ({ x, y });
+
+    // 5) Corpo com várias instruções — usar chaves e return
+    const somaComplexa = (a, b) => {
+      const s = a + b;
+      const mensagem = `soma = ${s}`;
+      return mensagem;
+    };
+
+    // 6) Uso como callback — ex: map, filter
+    const nums = [1,2,3];
+    const dobrados = nums.map(n => n * 2); // [2,4,6]
+
+    // Conecta botões a ações para ver resultados
+    const out = document.getElementById('out');
+    document.getElementById('ex1').onclick = () => out.textContent = 'soma(2,3) = ' + soma(2,3);
+    document.getElementById('ex2').onclick = () => out.textContent = 'dobro(5) = ' + dobro(5);
+    document.getElementById('ex3').onclick = () => out.textContent = 'criaObj(10,20) = ' + JSON.stringify(criaObj(10,20));
+    document.getElementById('ex4').onclick = () => out.textContent = somaComplexa(7,8);
+
+    // Exemplo rápido em console
+    console.log('nums:', nums, 'dobrados:', dobrados, 'conforme():', conforme());
+
+    // --- Teste no console / prompt (código corrigido) ---
+    // Função arrow correta que recebe dois parâmetros
+    const somaDeDoisNumeros = (n1, n2) => n1 + n2;
+
+    // Lê os números do usuário e valida
+    const entrada1 = prompt('Digite o primeiro número:');
+    const entrada2 = prompt('Digite o segundo número:');
+
+    const num1 = parseFloat(entrada1);
+    const num2 = parseFloat(entrada2);
+
+    if (isNaN(num1) || isNaN(num2)) {
+      alert('Entrada inválida. Certifique-se de digitar números válidos.');
+      console.warn('Entrada inválida:', entrada1, entrada2);
+    } else {
+      const resultado = somaDeDoisNumeros(num1, num2);
+      alert('Resultado: ' + resultado);
+      console.log('Resultado da soma:', resultado);
+    }
+  </script>
+</body>
+</html>

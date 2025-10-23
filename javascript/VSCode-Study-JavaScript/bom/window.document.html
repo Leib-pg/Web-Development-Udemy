@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<script>
+
+  function abrirPopUp() {
+   janela = window.open("https://www.google.com", "janelaGoogle", "width=400,height=300");
+
+  }
+
+  function fecharPopUp() {
+    window.janelaGoogle.close();
+
+  }
+
+</script>
+
+
+  </head>
+  <body>
+    <button onclick="abrirPopUp()">Abrir janela</button>
+    <button onclick="fecharPopUp()">Fechar janela</button>
+    <button onclick="location.reload()">Recarregar pagina</button>
+    <button onclick="location.href='https://www.youtube.com'">Ir para o Youtube</button>
+    <button onclick="history.back()">Voltar pagina</button>
+    <button onclick="history.forward()">Avancar pagina</button>
+    <button onclick="console.log(navigator.userAgent)">Ver user agent</button>
+    <button onclick="console.log(navigator.language)">Ver idioma do navegador</button>
+    <button onclick="console.log(screen.width)">Ver largura da tela</button>
+    <button onclick="console.log(screen.height)">Ver altura da tela</button>
+    <button onclick="console.log(screen.colorDepth)">Ver profundidade de cor</button>
+    <button onclick="console.log(screen.availWidth)">Ver largura disponivel da tela</button>
+    <button onclick="console.log(screen.availHeight)">Ver altura disponivel da tela</button>
+    <button onclick="console.log(window.innerWidth)">Ver largura interna da janela</button>
+    <button onclick="console.log(window.innerHeight)">Ver altura interna da janela</button>
+  </body>
+</html>

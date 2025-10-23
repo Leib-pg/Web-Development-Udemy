@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onresize e onscroll</title>
+  </head>
+  <body onresize="console.log('evento disparado!' )">
+    <!--onresize ele baiscamente ser para quando a janela for redimensionada ser aplicado algo -->
+    
+
+    <div  
+    onscroll="console.log('Div rolada!')"
+      style="width: 200px; height: 150px; overflow: auto; background: #ccc"
+      >
+      <div style="height: 600px">Conteúdo longo para rolar...</div>
+    <!--aqui apliquei o onscroll para escrever se a div teve alteração e apliquei o overflow auto para dar um tamnho de div suficiente para ter o scroll -->
+    </div>
+  </body>
+</html>

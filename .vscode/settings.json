@@ -1,85 +1,106 @@
 {
+  // Editor appearance & behavior
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 13,
   "editor.fontWeight": "normal",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
   "editor.lineHeight": 1.8,
   "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "editor.wordWrap": "on",
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.minimap.enabled": false,
-  "editor.cursorBlinking": "smooth",
   "editor.renderWhitespace": "all",
-  "editor.smoothScrolling": true,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "editor.formatOnSave": true,
-  "editor.codeLens": true,
   "editor.renderControlCharacters": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
   "editor.scrollBeyondLastLine": false,
-  "workbench.statusBar.visible": true,
   "editor.guides.indentation": true,
-
-  // Formatter padrão → Prettier
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.codeLens": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-  // ESLint + Prettier rodando no salvar
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always"
   },
 
-  "eslint.validate": ["javascript"],
-  "editor.insertSpaces": true,
-  "breadcrumbs.enabled": true,
+  // Files & autosave
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "node_modules": true,
+    ".vscode": false
+  },
+
+  // Search & Explorer
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
   "explorer.confirmDelete": false,
+  "breadcrumbs.enabled": true,
 
-  // Better Comments
-  "better-comments.tags": [
-    {
-      "tag": "!",
-      "color": "#FF2D00"
-    },
-    {
-      "tag": "?",
-      "color": "#3498DB"
-    },
-    {
-      "tag": "//",
-      "color": "#474747",
-      "strikethrough": true
-    },
-    {
-      "tag": "todo",
-      "color": "#FF8C00"
-    },
-    {
-      "tag": "*",
-      "color": "#98C379"
-    }
+  // Theme & icons
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.statusBar.visible": true,
+
+  // Extensions / Linters / Formatters
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
   ],
-  "CodeGPT.apiKey": "Anthropic",
-
-  "python.languageServer": "Pylance",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "venv/Scripts/python.exe",
   "python.formatting.provider": "black",
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
-  "files.exclude": {
-    "**/__pycache__": true,
-    "**/*.pyc": true
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  },
-  "python-envs.defaultEnvManager": "ms-python.python:venv",
-  "python-envs.pythonProjects": []
-=======
-  }
->>>>>>> Stashed changes
-=======
-  }
->>>>>>> Stashed changes
-}
 
+  // Python (adjust python.defaultInterpreterPath to the real path if needed)
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "python",
+  "python.terminal.executeInFileDir": true,
+  "python.execution.environment": "terminal",
+  "python.testing.pytestEnabled": true,
+
+  // Code Runner & terminal behavior (makes input() work)
+  "code-runner.runInTerminal": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+
+  // Live Server (useful for HTML/CSS/JS rapid testing)
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.wait": 500,
+
+  // Git
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+
+  // Performance / telemetry
+  "telemetry.telemetryLevel": "off",
+
+  // Helpful UX settings for learning
+  "workbench.startupEditor": "newUntitledFile",
+  "files.hotExit": "onExitAndWindowClose",
+  "debug.console.closeOnEnd": false,
+
+  // Better Comments tags (kept from your previous config)
+  "better-comments.tags": [
+    { "tag": "!", "color": "#FF2D00" },
+    { "tag": "?", "color": "#3498DB" },
+    { "tag": "//", "color": "#474747", "strikethrough": true },
+    { "tag": "todo", "color": "#FF8C00" },
+    { "tag": "*", "color": "#98C379" }
+  ],
+  "CodeGPT.apiKey": "Anthropic",
+  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "python-envs.pythonProjects": []
+}

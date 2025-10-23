@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Média de notas com função</title>
+  </head>
+  <body>
+    <script>
+      // Função que calcula a média
+      function calcularMedia(quantasNotas) {
+        let soma = 0;
+        for (let i = 0; i < quantasNotas; i++) {
+          let nota = parseFloat(prompt(`Digite a nota ${i + 1}:`));
+          soma += nota;
+        }
+        return soma / quantasNotas;
+      }
+
+      let nomeAluno = prompt("Digite o nome do aluno:");
+
+      let quantasNotas = parseInt(prompt("Quantas notas deseja inserir?"));
+
+      let media = calcularMedia(quantasNotas);
+
+      
+      if (media >= 7) {
+        alert(
+          `Parabéns, ${nomeAluno}! Você foi aprovado com média ${media.toFixed(
+            2
+          )}.`
+        );
+      } else {
+        alert(
+          `Que pena, ${nomeAluno}. Você foi reprovado com média ${media.toFixed(
+            2
+          )}.`
+        );
+      }
+    </script>
+  </body>
+</html>

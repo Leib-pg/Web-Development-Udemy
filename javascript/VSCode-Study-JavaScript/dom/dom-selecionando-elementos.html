@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Verifica Número ou Caractere</title>
+  </head>
+  <body>
+    <!-- Primeiro campo: digite qualquer coisa -->
+    <input type="text" id="campoTexto" placeholder="Digite algo..." />
+    <br />
+
+    <!-- Segundo campo: mostra o número se for número -->
+    <input
+      type="number"
+      id="campoNumero"
+      placeholder="Aqui aparece o número"
+      readonly
+    />
+    <br />
+
+    <!-- Terceiro campo: mostra se foi número ou caractere -->
+    <input
+      type="text"
+      id="campoTexto2"
+      placeholder="Aqui aparece o tipo"
+      readonly
+    />
+
+    <script>
+      // Seleciona os campos
+      const campoTexto = document.getElementById("campoTexto");
+      const campoNumero = document.getElementById("campoNumero");
+      const campoTexto2 = document.getElementById("campoTexto2");
+
+      // Quando digitar no primeiro campo
+      campoTexto.addEventListener("input", function () {
+        const valor = campoTexto.value;
+    
+        // Se estiver vazio, limpa os outros campos
+        if (valor === "") {
+          campoNumero.value = "";
+          campoTexto2.value = "";
+          return;
+        }
+
+        // Se for número (e não só espaço)
+        if (!isNaN(valor) && valor.trim() !== "") {
+          campoNumero.value = valor;
+          campoTexto2.value = "Foi um número";
+        } else {
+          campoNumero.value = "";
+          campoTexto2.value = "Foi um caractere";
+        }
+      });
+    </script>
+  </body>
+</html>

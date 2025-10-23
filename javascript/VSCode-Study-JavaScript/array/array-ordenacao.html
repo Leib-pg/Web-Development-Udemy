@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>array ordenação</title>
+<script>
+/*
+  var lista_frutas = array();
+
+  lista_frutas[0] = ("Banana");
+  lista_frutas[1] = ("Maçã");
+  lista_frutas[2] = ("Laranja");
+  lista_frutas[3] = ("Uva");
+  lista_frutas[4] = ("Pera");
+
+  console.log(lista_frutas.sort); // [ 'Banana', 'Maçã', 'Laranja', 'Uva', 'Pera' ]
+
+*/
+
+  // (sort) Ordenar os elementos do array em ordem alfabética
+  //lista_frutas.sort();
+  // o sort apenas organiza de forma alfabetica
+  //para arrumar numeros é necessario uma função auxiliar para ensinar o sort a tratar
+
+  var lista_numeros = array();
+
+  lista_numeros[0] = 10;
+  lista_numeros[1] = 5;
+  lista_numeros[2] = 20;
+  lista_numeros[3] = 15;
+  lista_numeros[4] = 30;
+ 
+  console.log(lista_numeros.sort(ordenar)); // [ 10, 15, 20, 30, 5 ]
+
+  function ordenar(a, b)
+  {
+    return a - b; // ordem crescente
+    //return b - a; // ordem decrescente
+
+  //valor < 0 a vem antes de b
+  //valor > 0 b vem antes de a
+  //valor == 0 nada muda
+  //se tiver caracter nao funciona
+  }
+
+</script>
+
+</head>
+<body>
+  
+</body>
+</html>

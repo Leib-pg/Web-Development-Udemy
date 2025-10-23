@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulando classes</title>
+    <style>
+      @keyframes mudarCor {
+        0% {
+          background-color: #1c9ccf;
+        }
+        50% {
+          background-color: rgb(173, 241, 255);
+        }
+        100% {
+          background-color: #436b65;
+        }
+      }
+      @keyframes mudarCor2 {
+        0% {
+          background-color: #1c2679;
+        }
+        50% {
+          background-color: rgb(32, 15, 181);
+        }
+        100% {
+          background-color: #175992;
+        }
+      }
+      .estilo1 {
+        animation: mudarCor 5s infinite;
+        width: 300px;
+        height: 100px;
+        border-radius: 10px;
+      }
+      .estilo2 {
+        animation: mudarCor2 5s infinite;
+        width: 150px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      </style>
+      <script>
+        function modificaClasse() {
+          const elemento = document.getElementById("mesagem");
+          elemento.classList.toggle("estilo1");
+          elemento.classList.toggle("estilo2");
+        }
+      </script>
+  </head>
+  <body>
+    <div id="mesagem" class="estilo1">Modificando estilos com Dom</div>
+    <br />
+    <button type="button" onclick="modificaClasse()">Aplicar classes</button>
+  </body>
+</html>
