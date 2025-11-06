@@ -1,5 +1,5 @@
+// Editor appearance & behavior
 {
-  // Editor appearance & behavior
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "editor.fontSize": 13,
   "editor.fontWeight": "normal",
@@ -8,21 +8,27 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.wordWrap": "on",
+  "editor.rulers": [80, 120],
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": false,
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "smooth",
   "editor.scrollBeyondLastLine": false,
+  "cSpell.enabled": false,
   "editor.guides.indentation": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "modifications",
   "editor.codeLens": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Code actions on save (JS/TS/HTML/CSS + geral)
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always",
-    "source.fixAll.eslint": "always"
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
 
   // Files & autosave
@@ -34,6 +40,8 @@
     "**/__pycache__": true,
     "**/*.pyc": true,
     "node_modules": true,
+    ".venv": true,
+    "venv": true,
     ".vscode": false
   },
 
@@ -47,38 +55,45 @@
   "breadcrumbs.enabled": true,
 
   // Theme & icons
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.statusBar.visible": true,
+  "workbench.editor.enablePreview": false,
 
-  // Extensions / Linters / Formatters
+  // Linters / Formatters
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
   ],
-  "python.formatting.provider": "black",
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
+  "eslint.run": "onSave",
+  "prettier.requireConfig": false,
 
-  // Python (adjust python.defaultInterpreterPath to the real path if needed)
+  // Python
+  "python.defaultInterpreterPath": "python",
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "python",
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "88"],
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
   "python.terminal.executeInFileDir": true,
   "python.execution.environment": "terminal",
   "python.testing.pytestEnabled": true,
 
-  // Code Runner & terminal behavior (makes input() work)
+  // Code Runner & terminal behavior (garante input() e execução em pasta do arquivo)
   "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.enablePersistentSessions": true,
   "terminal.integrated.shellIntegration.enabled": true,
 
-  // Live Server (useful for HTML/CSS/JS rapid testing)
+  // Live Server (rápido testes front-end)
   "liveServer.settings.port": 5500,
   "liveServer.settings.wait": 500,
+  "liveServer.settings.root": "/",
 
   // Git
   "git.autofetch": true,
@@ -92,15 +107,19 @@
   "files.hotExit": "onExitAndWindowClose",
   "debug.console.closeOnEnd": false,
 
-  // Better Comments tags (kept from your previous config)
-  "better-comments.tags": [
-    { "tag": "!", "color": "#FF2D00" },
-    { "tag": "?", "color": "#3498DB" },
-    { "tag": "//", "color": "#474747", "strikethrough": true },
-    { "tag": "todo", "color": "#FF8C00" },
-    { "tag": "*", "color": "#98C379" }
-  ],
-  "CodeGPT.apiKey": "Anthropic",
+  // HTML / CSS / JS niceties
+  "html.validate.scripts": true,
+  "css.validate": true,
+  "javascript.validate.enable": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+
+  // Small extras
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "extensions.ignoreRecommendations": false,
   "python-envs.defaultEnvManager": "ms-python.python:system",
   "python-envs.pythonProjects": []
 }

@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "ms-python.python", // Python support (debug, formatting, testing)
+    "ms-python.vscode-pylance", // Fast type analysis for Python
+    "esbenp.prettier-vscode", // Code formatter for JS/HTML/CSS/JSON
+    "dbaeumer.vscode-eslint", // ESLint linting & autofix
+    "ritwickdey.LiveServer", // Live Server for front-end
+    "formulahendry.auto-close-tag", // HTML tag helpers
+    "oderwat.indent-rainbow", // Visual indent guides
+    "wix.vscode-import-cost", // Show import size (useful)
+    "eamodio.gitlens", // Git superpowers
+    "ms-vscode.vscode-typescript-next", // Latest TS support if needed
+    "streetsidesoftware.code-spell-checker", // Spell checking comments/strings
+    "aaron-bond.better-comments" // Better comments colors
+  ]
+}
