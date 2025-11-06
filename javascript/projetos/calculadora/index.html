@@ -55,7 +55,7 @@
 
           <div class="calculadora">
           <input  id="resultado"  type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
-            
+
             <div class="row">
               <button  onclick="calcular('acao', 'c')" type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
               <button onclick="calcular('acao', '/')" type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
@@ -68,7 +68,7 @@
               <button onclick="calcular('valor', '9')" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
               <button onclick="calcular('acao', '-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
             </div>
-            
+
             <div class="row">
               <button onclick="calcular('valor', '4')" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
               <button onclick="calcular('valor', '5')" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
@@ -101,7 +101,7 @@
     if(valor === '=') {
       var valor_campo = eval(document.getElementById('resultado').value); //utlização do eval serve para que o interprete a string como uma expressão matemática
       document.getElementById('resultado').value = valor_campo;
-      
+
     }
 
 
@@ -111,13 +111,13 @@
     }
   }
 
-   
+
 </script>
 
           </div>
         </div>
       </div>
-    </div>    
-  </body>	
+    </div>
+  </body>
 
 </html>
