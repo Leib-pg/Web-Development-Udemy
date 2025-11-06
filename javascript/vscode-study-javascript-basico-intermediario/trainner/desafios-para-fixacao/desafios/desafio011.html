@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>desafio011 - verificando se o numero é primo </title>
+<script>
+
+
+//aqui vou criar a function
+
+  function verificacaoNumeroPrimo(numero){
+    if(numero < 1 )
+    return false
+
+  }
+  //a partir de 2, vai verificar se há algum divisor até a raiz quadrada do número
+    for(let i = 2; i <= math.sqrt(numero); i++)
+    //se um divisor o numero nao é primo
+  if( numero % i == 0) {
+    return false
+  }
+  {
+    //se pecorrer tudoe nao achar nada entao ele é primo
+    return true
+  }
+
+  console.log(verificacaoNumeroPrimo(37));
+  console.log(verificacaoNumeroPrimo(10));
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

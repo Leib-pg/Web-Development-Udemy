@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Função via Arrow</title>
+
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; background:#f4f7fb; color:#012; }
     button{ margin:6px 0; padding:8px 12px; }
@@ -11,6 +12,7 @@
   </style>
 </head>
 <body>
+  <!--
   <h2>Exemplos de Arrow Functions (=&gt;)</h2>
 
   <button id="ex1">Somar 2 + 3</button><br>
@@ -19,8 +21,9 @@
   <button id="ex4">Função com corpo (várias linhas)</button>
 
   <pre id="out"></pre>
-
+-->
   <script>
+    /*
     // 1) Função simples — retorno implícito (sem chaves)
     const soma = (a, b) => a + b;
 
@@ -73,6 +76,21 @@
       alert('Resultado: ' + resultado);
       console.log('Resultado da soma:', resultado);
     }
+    */
+
+    /*
+      const quadrado = x => {
+      return x * x
+    }
+    */
+
+    //const quadrado = x => x * x; // implicito
+
+    let parOuImpar = numer => numero % 2 === 0 ? 'par' : 'impar'// return implicito menos verboso (aqui é uma verficação contendo if e else junto com uma funçao)
+
+    document.write(parOuImpar(5))
+
+
   </script>
 </body>
 </html>

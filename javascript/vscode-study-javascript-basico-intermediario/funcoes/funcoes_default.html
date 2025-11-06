@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funçoes Default</title>
+  <script>
+    //aqui coloquei um default para caso a variavel nao tenho um valor a receber ele ja vai retornara algo ja esperado
+    function autoCompletHistoria (personagem = 'leib', idade = '17', altura = '1,77m') {
+      document.write(`meu nome é ${personagem}, nasci em 2008 então tenho ${idade}, e minha altura é ${altura} `)
+    }
+
+    // auqi eu posso definir um valor para as variaveis
+    autoCompletHistoria(undefined, '200', '1,90m')
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
