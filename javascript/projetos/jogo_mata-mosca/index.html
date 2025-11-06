@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mata-Mosca - Início</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+
+  <script>
+    function iniciarJogo() {
+      var nivel = document.getElementById('nivel').value;
+
+      if (nivel === '') {
+        alert('Selecione um nível para iniciar o jogo');
+        return false;
+      }
+
+      // Redireciona com o parâmetro correto
+      window.location.href = "app.html?" + nivel;
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <img src="imagens/game.png" alt="Jogo Mata-Mosca">
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div class="mb-3">
+          <select class="form-control" id="nivel">
+            <option value="">--Selecione o Nível--</option>
+            <option value="normal">Normal</option>
+            <option value="dificil">Difícil</option>
+            <option value="chucknorris">Chuck Norris</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
