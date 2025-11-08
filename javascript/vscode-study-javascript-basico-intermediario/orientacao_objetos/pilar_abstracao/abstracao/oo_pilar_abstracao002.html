@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abstração002</title>
+  <script>
+
+    //um software de marcearia
+    //cadeira e sofá
+
+    //paradigma procedural
+
+
+    // let qtde_pernas = 4;
+    // let giratoria = false;
+    // let cor = 'azul'
+
+    // caso eu tenha varios tipos de cadeira eu criaria um array de cadeiras
+    // let cadeiras = array()
+
+    // cadeira[0] = array()
+    // cadeira[0]['qtde_pernas'] = 4
+    // cadeira[0]['giratoria'] = false
+    // cadeira[0]['cor'] = 'azul'
+
+    // cadeira[0] = array()
+    // cadeira[0]['qtde_pernas'] = 1
+    // cadeira[0]['giratoria'] = true
+    // cadeira[0]['cor'] = 'preto'
+
+    // function girar_cadeira(indice) {
+    // if(cadeiras[indice]['girar_cadeira'] = true) {
+    //   console.log('girou')
+
+    // }else{
+    //     console.log('cadeira não girou')
+    //   }
+    // }
+
+    // cadeiras()
+
+
+    // novo modelo de criação de OO apartir do ES6
+    //paradigma de OO
+
+    class Cadeira {
+      constructor(qtde_pernas, giratoria, cor) {
+       //this faz referencia ao atributo do propio objeto
+       //variaveis sem this fazem referencia a variavel do escopo da função
+
+        this.qtde_pernas = qtde_pernas
+        this.giratoria= giratoria
+        this.cor = cor
+      }
+
+      girarCadeira(){
+        if(this.giratoria === true) {
+          console.log('Girou')
+      } else {
+          console.log('A cadeira não Gira')
+      }
+    }
+  }
+
+    //criando um cadeira
+    // o operador ** new ** estancia um objeto baseado em uma classe
+    //aqui posso criar um array colocando as estancias caso eu tenha muitas cadeiras
+
+    let bag = array()
+      bag.push(new Cadeira(4, false, 'azul'))
+      bag.push(new Cadeira(1, true, 'preta'))
+
+      //cadeira.girarCadeira()
+      cadeira2.girarCadeira()
+  </script>
+</head>
+<body>
+
+</body>
+</html>
