@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilar Encapsulamento</title>
+
+  <script>
+
+    // Criamos uma classe chamada 'Tv'
+    // As classes são moldes (modelos) que definem como os objetos serão estruturados e o que podem fazer
+    class Tv {
+
+      // O 'constructor' é executado automaticamente quando usamos 'new Tv()'
+      // Aqui definimos os atributos iniciais da nossa TV
+      constructor() {
+
+        // O nome com "_" (underline) é uma convenção para indicar que o atributo é "privado"
+        // (não deve ser acessado diretamente de fora da classe)
+        // Aqui, a TV tem uma lista de canais disponíveis
+        this._relacaoCanais = Array(2, 4, 5, 7, 10)
+
+        // Canal ativo inicialmente
+        this._canalAtivo = 5
+
+        // Volume inicial da TV
+        this._volume = 10
+      }
+
+      // ------------------------------
+      // GETTERS
+      // ------------------------------
+      // Getters são usados para "obter" (ler) um valor protegido.
+      // Eles funcionam como funções, mas são acessados como se fossem propriedades.
+      get canalAtivo() {
+        // Retorna o canal atualmente ativo
+        return this._canalAtivo
+      }
+
+      // ------------------------------
+      // SETTERS
+      // ------------------------------
+      // Setters são usados para "definir" (alterar) o valor de um atributo protegido.
+      // Eles permitem controlar e validar o valor antes de realmente mudá-lo.
+      set canalAtivo(canal) {
+
+        // 'indexOf' verifica se o canal informado está na lista '_relacaoCanais'.
+        // Se o canal existir, o 'indexOf' retorna a posição dele (0, 1, 2...).
+        // Se NÃO existir, ele retorna -1.
+        // Então, aqui dizemos: se o canal estiver na lista (ou seja, index != -1), muda o canal ativo.
+        if (this._relacaoCanais.indexOf(canal) !== -1) {
+          this._canalAtivo = canal
+        }
+      }
+
+    }
+
+    // Criamos um objeto 'tv' a partir da classe 'Tv'
+    let tv = new Tv()
+
+    // Aqui estamos tentando mudar o canal ativo da TV para 7.
+    // Isso chama automaticamente o método 'set canalAtivo(canal)'.
+    tv.canalAtivo = 7
+
+    // Aqui estamos "pegando" o canal atual da TV.
+    // Isso chama o método 'get canalAtivo()'.
+    console.log(tv.canalAtivo)
+
+  </script>
+</head>
+<body>
+</body>
+</html>
