@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade</title>
+    <script>
+        // 1. Inicializa as variáveis de contagem
+        let menor = 0;
+        let maior = 0;
+
+        // 2. O loop roda 8 vezes (i de 0 a 7)
+        for(let i = 0; i < 8; i++) {
+
+            // 3. Usa prompt() para entrada e parseInt() para conversão
+            // Nota: O prompt pode retornar null ou uma string vazia; o parseInt ajuda a lidar com isso.
+            let anoNascimento = prompt(`Pessoa ${i + 1}: Digite seu ano de nascimento:`);
+
+            // Verifica se o usuário digitou algo
+            if (anoNascimento === null || anoNascimento.trim() === "") {
+                alert("Entrada inválida. Tente novamente.");
+                continue; 
+            }
+
+            let idade = 2025 - parseInt(anoNascimento);
+
+            // 4. Lógica e operadores de incremento corretos
+            if(idade < 18) {
+                menor += 1;
+            } else {
+                maior += 1;
+            }
+        }
+
+        console.log(`Tem ${menor} pessoas menor de idade.`);
+        console.log(`Tem ${maior} pessoas maior de idade.`);
+
+        // Opcional: Mostra o resultado em um alerta na tela
+        alert(`O resultado final é:\nMenores de idade: ${menor}\Maiores de idade: ${maior}`);
+
+    </script>
+</head>
+<body>
+    <h1>Verifique o Console (F12)</h1>
+    <p>O programa irá solicitar 8 anos de nascimento, um de cada vez.</p>
+</body>
+</html>
