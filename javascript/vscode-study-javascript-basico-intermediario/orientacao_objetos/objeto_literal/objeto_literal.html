@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Objeto Literal em JavaScript</title>
+</head>
+<body>
+
+    <h1>Exemplo de Objeto Literal</h1>
+    <p>Abra o **Console do Desenvolvedor** (F12) para ver a saída do código JavaScript.</p>
+
+    <script>
+        // 1. Criação do Objeto Literal
+        const perfilUsuario = {
+            // Propriedades (Chave: Valor)
+            nome: "Ana Silva",
+            idade: 32,
+            cidade: "São Paulo",
+            isAtivo: true,
+
+            // Propriedades que são Arrays
+            interesses: ["Leitura", "Viagem", "Tecnologia"],
+
+            // Propriedades que são outros Objetos Literais (Objetos Aninhados)
+            contato: {
+                email: "ana.silva@exemplo.com",
+                telefone: "11 98765-4321"
+            },
+
+            // Métodos (Funções definidas como valores de uma chave)
+            apresentar: function() {
+                // O 'this' refere-se ao próprio objeto (perfilUsuario)
+                return `Olá! Meu nome é ${this.nome} e eu tenho ${this.idade} anos.`;
+            },
+
+            // Forma curta de definir um método (ES6+)
+            saudar(outroNome) {
+                return `Oi, ${outroNome}! A ${this.nome} está te saudando.`;
+            }
+        };
+
+        // ---
+        // 2. Acesso e Leitura de Propriedades
+        // ---
+
+        console.log("--- 2. Acesso e Leitura de Propriedades ---");
+
+        // Acesso por notação de ponto
+        console.log(`Nome do Usuário: ${perfilUsuario.nome}`);
+
+        // Acesso a propriedades aninhadas
+        console.log(`Email de Contato: ${perfilUsuario.contato.email}`);
+
+        // ---
+        // 3. Modificação de Propriedades
+        // ---
+
+        console.log("\n--- 3. Modificação de Propriedades ---");
+
+        // Mudar um valor existente
+        perfilUsuario.idade = 33;
+        console.log(`Nova Idade: ${perfilUsuario.idade}`);
+
+        // Adicionar uma nova propriedade
+        perfilUsuario.profissao = "Desenvolvedora";
+        console.log(`Nova Profissão: ${perfilUsuario.profissao}`);
+
+
+        // ---
+        // 4. Execução de Métodos
+        // ---
+
+        console.log("\n--- 4. Execução de Métodos ---");
+
+        // Chamando o método 'apresentar'
+        console.log(perfilUsuario.apresentar());
+
+        // Chamando o método 'saudar'
+        console.log(perfilUsuario.saudar("João"));
+
+    </script>
+
+</body>
+</html>
