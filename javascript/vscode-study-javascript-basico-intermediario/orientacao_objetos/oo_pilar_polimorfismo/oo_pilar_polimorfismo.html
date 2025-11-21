@@ -7,7 +7,7 @@
   <script>
 
     class Animal {
-      constructor() {
+      constructor(cor, tamanho, peso) {
         this.cor = cor
         this.tamanho = tamanho
         this.peso = peso
@@ -30,7 +30,7 @@
       super('Médio', cor, tamanho, peso)
       this.sabeFalar = sabeFalar
     }
-    falr(){
+    falar(){
       console.log('Fala !')
     }
   }
@@ -51,7 +51,7 @@
   let papagaio = new Papagaio(true, 'Verde', 25, 350)
   console.log(papagaio)
 
-  papagaio.voar()
+
 
   let avestrus = new Avestruz()
 
