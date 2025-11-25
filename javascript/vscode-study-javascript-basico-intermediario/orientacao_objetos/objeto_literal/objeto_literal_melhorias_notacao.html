@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objeto literal melhorias notação</title>
+  <script>
+
+    let nome = 'Augusto';
+    let idade = 17;
+    let sexo = 'masculino';
+    let profissao = 'pedreiro';
+
+    let objeto = {
+      nome : nome,
+      idade : idade,
+      sexo : sexo,
+      profissao : profissao,
+      exibirResumo: function() {
+        console.log(`meu nome é ${nome} minha idade é: ${this.idade} ${sexo} ${profissao} `)
+
+      }
+    }
+
+    console.log(objeto)
+    objeto.exibirResumo()
+
+    //aqui é um exemplo de quando o par ordenado tem o mesmo nome, é uma forma mais enxuta de escrever o codigo
+    let objeto2 = {
+      nome, // nome = nome variavel / valor = valor da variável
+      idade,
+      sexo,
+      profissao,
+      //aqui tem uma forma de definir funções dentro de um objeto de forma mais enxuta o es6 ja entende que é uma função sem mesmo ter chamado o metodo function
+      exibirResumo() {
+        console.log(`meu nome é ${nome} minha idade é: ${this.idade} ${sexo} ${profissao} `)
+
+      }
+    }
+    console.log(objeto2)
+    exibirResumo()
+  </script>
+</head>
+<body>
+
+</body>
+</html>
