@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<script>
+  const arrayRoupa = ['camisa', 'short', 'blusa', 'sapato'];
+//push 
+  arrayRoupa.push('cinto');
+  console.log('após push:', arrayRoupa);
+
+  arrayRoupa.pop('camisa');
+  console.log('após pop:', arrayRoupa);
+
+  arrayRoupa.unshift('bermuda');
+  console.log('após unshift:', arrayRoupa);
+  // O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
+  const idx = arrayRoupa.indexOf('camisa');
+  if (idx !== -1) {
+    //spice serve para criar um novo elemento e remover o antigo
+    arrayRoupa.splice(idx, 1);
+    console.log("após remover 'camisa':", arrayRoupa);
+  }
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

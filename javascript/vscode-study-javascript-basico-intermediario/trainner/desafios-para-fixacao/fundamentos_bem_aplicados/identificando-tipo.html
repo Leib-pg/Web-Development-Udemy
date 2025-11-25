@@ -6,15 +6,32 @@
   <title>identificando o tipo</title>
   <script>
 
-    function verificarTipo(valorx) {
+    //primeiro vai fazer o usuario digitar o valor que ele quer
+    function verificarTipo(){
 
-      const tipo = typeof valorx
-      return tipo;
+      const valor = prompt("Digite um valor (seja ele = string, numero ou boolean.)")
+
+    // dizer se ele é valido ou nao
+      if(valor === null){
+        console.log("valor nao valido!")
+        //terminando execução caso seja invalido o volor digitado
+        return;
+      }
+
+    //usando modullo typeof para ver qual o tipo
+      const tipo = typeof valor;
+
+    //aqui estou verificando se ele é um numero
+    //logica ultilizada "se ele é diferente de não numero e um numero finito então console.log ele é um numero"
+    if (!isNaN(parseFloat(valor)) && isFinite(valor)) {
+      console.log("o valor Digitado é um numero")
+    } else if (valor.toLowerCase() === "true" || valor.toLowerCase() === "false" ) {
+      console.log("o valor Digitado é boolean")
+    }
 
     }
 
-    input(())
-
+    verificarTipo();
 
   </script>
 </head>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quatidade numero pares</title>
+  <script>
+
+
+    function contadorDeNumerosPares(limite) {
+  let qtdPares = 0;
+  let qtdImp = 0;
+
+  for (let i = 0; i < limite; i++) {
+    const numero = parseInt(prompt(`Digite o ${i + 1}º número:`));
+    
+    if (numero % 2 === 0) {
+      qtdPares++;
+    } else {
+      qtdImp++;
+    }
+  }
+
+  console.log(`Pares: ${qtdPares}`);
+  console.log(`Ímpares: ${qtdImp}`);
+}
+
+contadorDeNumerosPares(5);
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
