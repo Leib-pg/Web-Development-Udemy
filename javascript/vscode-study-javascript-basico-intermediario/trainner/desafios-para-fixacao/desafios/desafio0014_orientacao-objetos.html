@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+
+  class Carro {
+    constructor(cor, qtdPortas, marca, ehAutomatico, velocidade, ligado) {
+      this.cor = cor
+      this.qtdPortas = qtdPortas
+      this.marca = marca
+      this.ehAutomatico = ehAutomatico
+      this.velociade = velocidade
+      this.ligado = ligado
+
+    }
+    ligar() {
+      this.ligado = true
+    }
+    desligar() {
+      this.ligado = false
+    }
+    acelerar() {
+      if (this.ligado) {
+        this.velocidade += 10
+      }
+    
+
+    }
+  }
+
+    let carro1 = new  Carro('Vermelho', 4, 'Fiat', true, 0, false)
+    console.log(carro1)
+
+</script>
+<body>
+
+</body>
+</html>
